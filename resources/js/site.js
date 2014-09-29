@@ -36,6 +36,6 @@ echadZeman.config(function($routeProvider, $locationProvider) {
 			controller: "InfoController"
 		})
 		.otherwise({
-			redirectTo: "info"
+			redirectTo: "/info"
 		});
 });
