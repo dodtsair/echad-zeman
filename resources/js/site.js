@@ -1,7 +1,5 @@
 var echadZeman = angular.module('echad-zeman', ['ngRoute']);
 
-$location.html5Mode(false)
-
 echadZeman.controller('body', function ($scope, $route, $routeParams, $location) {
      $scope.$route = $route;
      $scope.$location = $location;
@@ -24,7 +22,10 @@ echadZeman.controller('RegisterController', function($scope, $routeParams) {
 });
 
 echadZeman.config(function($routeProvider, $locationProvider) {
-	$routeProvider
+
+    $locationProvider.html5Mode(false);
+    $locationProvider.hashPrefix('!');
+    $routeProvider
 		.when('/login', {
 			templateUrl: 'login.html',
 			controller: "LoginController"
