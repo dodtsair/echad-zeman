@@ -1,5 +1,7 @@
 var echadZeman = angular.module('echad-zeman', ['ngRoute']);
 
+$location.html5Mode(false)
+
 echadZeman.controller('body', function ($scope, $route, $routeParams, $location) {
      $scope.$route = $route;
      $scope.$location = $location;
