@@ -1,25 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="echad-zeman">
 <head>
     <meta charset="utf-8">
     <title>Echad Zeman</title>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.min.js"></script>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular-route.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/site.css">
+    <script src="resources/js/site.js"></script>
+    <body ng-controller="body" ng-view/>
 </head>
-<body>
-<header>
-    <img id="siteLogo" src=""/>
-    <div>
-        <div id="loggedIn">
-            <span id="loggedInUser"></span>
-            <button id="logout">Logout</button>
-        </div>
-        <div id="loggedOut">
-            <input type="text" id="inputUserName">
-            <button id="login">Login</button>
-        </div>
-
-    </div>
-</header>
-</body>
 </html>
