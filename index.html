@@ -2,39 +2,52 @@
 <html lang="en" ng-app="echad-zeman">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Echad Zeman</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-rc.3/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator/3.12.0/validator.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/3.1.0/pouchdb.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="resources/css/site.css">
+    <script src="resources/js/lib/scrypt.js"></script>
     <script src="resources/js/site.js"></script>
-    <body ng-controller="body" ng-view/>
+    <script src="resources/js/user/userService.js"></script>
+    <script src="resources/js/user/userDao.js"></script>
+    <script src="resources/js/validator.js"></script>
+    <script src="resources/js/pouchdb.js"></script>
+    <script src="resources/js/scrypt.js"></script>
+<body ng-controller="body" ng-view/>
 </head>
 <body>
 <header>
     <img id="siteLogo" src="logo_one.png"/>
+
     <div>
         <div id="loggedIn">
             <span id="loggedInUser"></span>
-            <button id="logout" onclick="JavaScript:alert('You are not logged in. You cannot log out yet!')">Logout</button>
+            <button id="logout">Logout
+            </button>
         </div>
         <div id="loggedOut">
             <input type="text" id="inputUserName">
-            <a href="page1.html"><button id="login">Login</button></a>
+            <a href="page1.html">
+                <button id="login">Login</button>
+            </a>
         </div>
     </div>
 </header>
 
 <script type='text/javascript'>
-	//confirm("Day 3. Still lost. Somehow managing to fake progress.")
-	//confirm("It's not Day 3 anymore. You can ignore that last one.")
-	alert("Now this site has a proper alert instead of a useless confirm box!")
+    //confirm("Day 3. Still lost. Somehow managing to fake progress.")
+    //confirm("It's not Day 3 anymore. You can ignore that last one.")
 </script>
 
 <p>
-	<em>Welcome.</em> <br>
-	Click Login to view page 1. <br>
-	(Currently the input field doesn't connect to anything.)
+    <em>Welcome.</em> <br>
+    Click Login to view page 1. <br>
+    (Currently the input field doesn't connect to anything.)
 </p>
 
 <!--<p>Hey- what does that angular/ajax stuff in the head do?</p>-->
