@@ -29,7 +29,6 @@
                 userService.createUser(registerController.email, registerController.password, registerController.repeatPassword);
                 registerController.reset();
             }
-            return true;
         };
         this.reset = function() {
             registerController.email = "";
