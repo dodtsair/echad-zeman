@@ -1,7 +1,7 @@
 (function () {
 
     var echadZeman = angular.module('echad-zeman');
-    echadZeman.factory('userService', ['validator', 'scrypt', 'userDao', function(validator, scrypt, userDao) {
+    echadZeman.factory('userService', ['userDao', function(userDao) {
         var userService = {
             createUser: function(emailAddress, password, repeatPassword, cb) {
                 userDao.readByEmail(emailAddress, function(err, response) {
