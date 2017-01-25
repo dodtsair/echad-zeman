@@ -29,7 +29,6 @@
                 userService.createUser(registerController.email, registerController.password, registerController.repeatPassword);
                 registerController.reset();
             }
-            return true;
         };
         this.reset = function() {
             registerController.email = "";
@@ -42,8 +41,11 @@
 
     echadZeman.config(function ($routeProvider, $locationProvider) {
 
-        $locationProvider.html5Mode(false);
-        $locationProvider.hashPrefix('!');
+        $locationProvider.html5Mode({
+            rewriteLinks: true,
+            requireBase: true,
+            enabled: true
+        });
         $routeProvider
             .when('/login', {
                 templateUrl: 'login.html',
